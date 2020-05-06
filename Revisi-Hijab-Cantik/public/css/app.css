@@ -1,0 +1,101 @@
+#imgPreview {
+	margin-top: 1rem;
+
+}
+
+#copy{
+	width: 520px
+	margin-top: 2rem;
+	padding: 0.5rem;
+	width: 80%;
+	display: inline-block;
+	margin-bottom: 5px;
+	border: 2px solid #f1f1f1;
+}
+.statusMsg {
+	text-align: center;
+	margin-top: 0.5rem;
+	color: red;
+}
+
+.content {
+	text-align: center;
+	margin: 0 auto;
+	width: auto
+}
+
+.imgView {
+	width: 100%;
+	
+}
+
+#app {
+	text-align: center;
+	align-items: center;
+}
+
+#lihatData {
+	display: none;
+}
+fieldset> .inline_box > input {
+	margin: 0 auto;
+	padding: 0.5rem;
+	width: 80%;
+	display: inline-block;
+	margin-bottom: 5px;
+	border: 2px solid #f1f1f1;
+}
+
+fieldset {
+	text-align: center;
+	max-width: 520px;
+	border-radius: 0;
+	border: 1px solid #f1f1f1;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.box {
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 1rem 1rem;
+	border: 1px solid #f1f1f1;
+}
+
+.overflow {
+	overflow-x: auto;
+	max-width: 100%;
+}
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee;
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold;
+  text-align: center; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+@media only sreen and (width: 360px){
+	.overflow {
+		max-width: 320px;
+		overflow-x: auto
+	}
+}
+
+button {
+	padding: 8px;
+}

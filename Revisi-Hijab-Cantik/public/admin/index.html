@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sheet Production</title>
+	  <meta charset="utf-8">
+     <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta content='#009688' name='theme-color'/>
+    <meta content='#009688' name='msapplication-navbutton-color'/>
+    <meta content='yes' name='apple-mobile-web-app-capable'/>
+    <meta content='#009688' name='apple-mobile-web-app-status-bar-style'/>
+    <link rel="stylesheet" href="css/uikit.css" />
+    <link rel="stylesheet" href="css/costume.css" />
+
+     <!-- Utility Service
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+</head>
+<body>
+
+ <!-- ====== NAVBAR CONTAINER =====
+ ------------------------------------- -->
+ <div data-uk-sticky class="uk-navbar-container uk-preserve-width">
+        <nav class="uk-card uk-card-default uk-navbar-item" id="wakilat-nav" uk-navbar>
+            <div class="uk-navbar-left">
+            <a href="#" class=" uk-logo uk-animation-fade uk-animation-fast" tabindex="0"><img src="https://3.bp.blogspot.com/-jNZ14VapMyQ/XjU4AJw6AXI/AAAAAAAAAZI/LfMqKkPSBKkpJTjCJCH7yq1wQZc7htvrACLcBGAsYHQ/s1600/20200201_153116.png" alt="Wakilat Store" width="180px"></a>
+            </div>
+            <div class="uk-navbar-right">
+            	
+            <div class="uk-navbar-item">
+
+                    <!-- nav admin --->
+                	<a href="#uk-setting" class="uk-navbar-toggle uk-visible@l " uk-icon="icon: settings; ratio:1.2;" id="icon-setting" uk-toggle></a>
+
+                    <a href="#uk-tutorial" class="uk-navbar-toggle uk-visible@l " uk-icon="icon: play-circle; ratio:1.2;" class="uk-animation-fade" id="icon-tutorial" uk-toggle></a>
+
+                    <a href="#uk-database" class="uk-navbar-toggle uk-visible@l "  uk-icon="icon: database; ratio:1.2;" id="icon-database" uk-toggle></a>
+
+            </div>
+            <div class="uk-navbar-right">
+                <div class="uk-navbar-item">
+                    <a class="uk-hidden@m" id="icon-menu-mobile" data-uk-toggle data-uk-navbar-toggle-icon href="#mobileCanvas"></a>
+                    <a href="#sign-out" class="uk-button uk-button-default uk-visible@l" id="icon-signout"><span uk-icon="icon: sign-out; ratio:1.2;"></span> LOG OUT</a>
+
+                </div>
+            </div>
+        </nav>
+
+        <div id="mobileCanvas" data-uk-offcanvas="flip: true; overlay: true">
+                <div class="uk-offcanvas-bar uk-light uk-offcanvas-bar-animation uk-offcanvas-slide">
+                    <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+                    
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="uk-nav-header uk-preserve-width">
+                            Hijab Wanita Cantik
+                        </li>
+                         <div class="uk-divider-icon"></div>
+                         <!-- nav admin -->
+                        <li><a href="#uk-setting" uk-toggle><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: settings"></span> Settings</a></li>
+
+                        <li class="uk-nav-divider"></li>
+
+                        <li><a href="#uk-tutorial" uk-toggle><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: play-circle"></span> Tutorial</a></li>
+                        <li class="uk-nav-divider "></li>
+
+                        <li><a href="#uk-database"  uk-toggle><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: database"></span> Database</a></li>
+                        <li class="uk-nav-divider"></li>
+                        <li><a href="/"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: sign-out"></span> Sign Out</a></li>
+
+                        <div class="uk-divider-icon"></div>
+                    </ul>
+                </div>
+            </div><!-- MOBILE CANVAS
+        ------------------------- -->
+</div><!-- NAVBAR END DOCUMENT
+ ------------------------------------- -->
+
+ <!-- MOBILE CANVAS
+ ------------------------- -->
+
+<!-- ===== PROFILE PAGE =====
+-------------------------------------- -->
+<div class="uk-card row-center">
+    <div class="uk-child-width-1-1@m" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-media-top">
+                    <img src="images/light.jpg" class="uk-border-circle" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <h4 class="uk-card-title">Hijab Wanita Cantik</h4>
+                    <p class="descID">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                </div>
+                <div class="uk-card-footer uk-padding-small">
+                    <a href="#modal-kontak" class="uk-button uk-button-default uk-float-left" id="btn_sos" uk-toggle>Kontak</a>
+                    <a href="#modal-sosmed" class="uk-button uk-button-default uk-float-right" uk-toggle>Link &amp; Sosmed</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="uk-card uk-card-default uk-box-shadow-medium">
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="autoplay: true; delay: 1000">
+
+          <ul class="uk-slideshow-items">
+              <li>
+                  <img src="https://1.bp.blogspot.com/-3ZaHV1NKGSw/XiXCrtgU4XI/AAAAAAAAAWk/05xIT-gdbrwZnLwPvo6YcpoYWcUp8HAUQCLcBGAsYHQ/s1600/sreenshoot-image.png" alt="">
+              </li>
+              <li>
+                  <img src="https://1.bp.blogspot.com/-3ZaHV1NKGSw/XiXCrtgU4XI/AAAAAAAAAWk/05xIT-gdbrwZnLwPvo6YcpoYWcUp8HAUQCLcBGAsYHQ/s1600/sreenshoot-image.png" alt="" >
+              </li>
+              <li>
+                  <img src="https://1.bp.blogspot.com/-3ZaHV1NKGSw/XiXCrtgU4XI/AAAAAAAAAWk/05xIT-gdbrwZnLwPvo6YcpoYWcUp8HAUQCLcBGAsYHQ/s1600/sreenshoot-image.png" alt="">
+              </li>
+          </ul>
+
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+</div>
+</div>
+
+
+<!-- CONTENT GRID LAYOUT START
+-------------------------------- -->
+<div class="uk-grid  uk-card-body uk-grid-medium uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-3@l  uk-child-width-1-4@xl" data-uk-grid="masonry: true" data-uk-sortable="handle: .drag-icon" id="uk-database">
+    <script id="grid-template" type="text/x-handlebars-template">
+
+     <div>
+        <div class="uk-card uk-card-default uk-card-hover" uk-scrollspy="cls: uk-animation-fade; repeat: true; delay: 1100">
+                
+                <div class="uk-card-header">
+                    <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid>
+                        <div class="uk-width-expand">
+                          <span class="cat-txt"> Rp. {{cells.Harga}}</span>
+                        </div>
+                        <div class="uk-width-auto uk-text-right uk-text-muted">
+                            <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1.2"></a>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="uk-card-media-top">
+                    <img src="{{cells.Gambar}}" alt="{{cells.Nama}}">
+                </div>
+                <div class="uk-card-body">
+                <ul uk-accordion style="overflow: hidden">
+               
+                <li class="uk-description-list">
+                    <dt class="uk-margin-small-bottom uk-margin-remove-adjacent uk-width-expand uk-accordion-title">{{cells.Nama}}</dt>
+                    <dd class="uk-text-small uk-text-muted uk-text-justify uk-align-justify@s uk-align-justify@m uk-align-justify@l uk-accordion-content">{{cells.Deskripsi}}</dd>
+                </li>
+                </div>
+                
+                </ul>
+
+                <div class="uk-card-footer">
+                    <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid>
+                        <div class="uk-width-auto uk-text-small uk-text-left">
+                            <i id="on-product" data-uk-tooltip="title: Tersedia" class="uk-icon-button" uk-icon="info"></i>
+                        </div>
+                        <div class="uk-width-expand uk-text-center">
+                           
+                            <a href="#" id="link-whatsapp" data-uk-tooltip="title: Whatsapp" class="uk-icon-link" data-uk-icon="icon:whatsapp; ratio: 1.2"></a>
+                        </div>
+
+                        <div class="uk-width-auto uk-text-right">
+                            <a href="#" id="link-ek"><span data-uk-icon="icon:bolt; ratio: 1.2"></span> View More</a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+        </div>
+     </div>
+         
+    </script>
+</div>
+<!-- CONTENT GRID LAYOUT END
+-------------------------------- -->
+
+
+<div class="uk-section uk-card uk-card-default">
+    <div class="uk-container">
+
+        <div class="uk-child-width-1-3@m uk-padding-small" uk-grid>
+            <div>
+                <h4 class="uk-text-center">OFFICIAL STORE</h4>
+                <p class="uk-text-center uk-text-muted">Jl. Raya Karangpucung RT 03/11, Desa Sindangbarang, Dusun Banjarwaru, Kecamatan Karangpucung - Cilacap 53255.</p>
+                <p class="uk-text-center">Lihat di <a href="#">Google Maps</a></p>
+                <div class="uk-divider-icon uk-hidden@l"></div>
+            </div>
+
+            
+
+             <div>
+                <h4 class="uk-text-center">PAYMENT &amp; DELIVERY</h4>
+                <p class="uk-text-center uk-text-muted">Jl. Raya Karangpucung RT 03/11, Desa Sindangbarang, Dusun Banjarwaru, Kecamatan Karangpucung - Cilacap 53255.</p>
+               <div class="uk-divider-icon uk-hidden@l"></div>
+            </div>
+
+           
+
+             <div>
+                <h4 class="uk-text-center">HUBUNGI KAMI</h4>
+                <p class="uk-text-center uk-text-muted">Jl. Raya Karangpucung RT 03/11, Desa Sindangbarang, Dusun Banjarwaru, Kecamatan Karangpucung - Cilacap 53255.</p>
+                
+            </div>  
+            
+        </div>
+
+    </div>
+</div>
+
+<!--FOOTER-->
+<footer class="uk-section uk-section-xsmall uk-box-shadow-xlarge">
+    <div class="uk-container">
+        <p class="uk-text-small uk-text-center">Copyright 2020 - <a href="">E-compfast Digital </a>| Built with <a href="#" title="E-compfast Digital" target="_blank" data-uk-tooltip><span data-uk-icon="google"></span></a> </p>
+    </div>
+</footer>
+<!--/FOOTER-->
+
+
+<!-- ===== MODAL TUTORIAL ====
+----------------------------- -->
+<div id="uk-tutorial" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h4 class="uk-text-medium"><span data-uk-icon="icon: play-circle; ratio:1.5"></span> TUTORIAL</h4>
+        </div>
+        <div class="uk-modal-body" uk-overflow-auto>
+            <p class="tutorialMsg">Tidak ada tutorial apapun disini!</p>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Kembali</button>
+            <a href="#" class="uk-button uk-button-primary">Ok</a>
+        </div>
+    </div></div>
+<!-- END NOTIF DOCUMENT
+----------------------------- -->
+
+<!-- ===== MODAL FORM DB =====
+----------------------------- -->
+<div id="uk-database" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+           <h4 class="uk-text-medium">
+				<span uk-icon="icon: database; ratio: 1.5"></span> PRODUCT FORM</h4>
+        </div>
+        <div class="uk-modal-body" uk-overflow-auto>
+            <div class="js-upload uk-placeholder uk-text-center " style="background: #f1f1f1;">
+			    <span uk-icon="icon: cloud-upload"></span>
+			    <span class="uk-text-middle">Drag and Drop here or</span>
+			    <div uk-form-custom >
+			        <input type="file" multiple disabled="true">
+			        <span class="uk-link">Selecting one</span>
+			    </div>
+			</div>
+				<fieldset class="uk-text-center" style="border: 2px solid #f1f1f1;  padding: 1rem;">
+					<legend>DRIVE IMAGE LINK PRODUCT</legend>
+					<div class="uk-block">
+					<input class="uk-input uk-width-1-1" type="link" name="Gambar" id="linkDrive" placeholder="Paste Link Gambar Google Drive" required />
+					<button class="uk-button uk-button-primary uk-width-1-1" type="submit" id="driveDown">Validasi</button>
+					</div>
+					
+				</fieldset>
+				<fieldset class="uk-text-center imgPreview" style="border: 2px solid #f1f1f1; padding: 2rem;">
+					<legend>PREVIEW PRODUCT</legend>
+					<div class="prev"></div>
+				</fieldset>
+
+			<input type="text" class="uk-input uk-margin-small" name="nama" placeholder="Nama produk" id="namaProduk" required/>
+			<input type="number" class="uk-input uk-margin-small" name="harga" placeholder="Harga produk" id="hargaProduk" required/>
+	      	<textarea type="text" class="uk-textarea uk-margin-small" rows="6" placeholder="Masukan deskripsi produk" id="descProduct" required></textarea>
+
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Kembali</button>
+            <a href="#" class="uk-button uk-button-primary" id="submitBtn">Ok</a>
+        </div>
+	</div>
+<!-- MODAL FORM END DOCUMENT
+----------------------------- -->
+
+<!-- ===== MODAL PROFILE =====
+----------------------------- -->
+<div id="uk-setting" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h4 class="uk-text-medium"><span data-uk-icon="icon:settings; ratio:1.5"></span> PROFILE SETTING</h4>
+        </div>
+        <div class="uk-modal-body uk-text-center" uk-overflow-auto>
+            <div class="uk-card-media-top uk-margin-remove">
+                   <img src="images/light.jpg" class="uk-border-circle" alt="">
+            </div>
+               <div class="uk-card-body uk-margin-remove">
+                   <h4 class="uk-card-title ">Hijab Wanita Cantik</h4>
+                   <p class="descID">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+               </div>
+            
+                <fieldset class="uk-margin-remove">
+                    <legend class="uk-text-center">Deksripsi Toko</legend>
+                <textarea class="uk-input" type="text" rows="7" placeholder="Masukan deskripsi toko..." id="deskripsiID"></textarea>
+                    
+                </fieldset>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Kembali</button>
+            <a href="#" class="uk-button uk-button-primary" id="saveDeskripsi">Simpan</a>
+        </div>
+    </div></div>
+<!-- END PROFILE_SETTING
+----------------------------- -->
+
+<!-- MODAL SOCIAL MEDIA
+----------------------------- -->
+<div id="modal-sosmed" uk-modal>
+    <div class="uk-modal-dialog">
+        <div class="uk-modal-body">
+            <div class="uk-divider-icon"></div>
+            <div class="uk-card uk-card-default uk-padding-large">
+                <div class="uk-card-media-top uk-text-center">
+                    <!-- <img src="images/light.jpg" class="uk-border-circle" alt="">
+                    <h2 class="uk-card-header">Ikuti Kami</h2> -->
+                    <a href="#"  class="uk-icon-link " data-uk-icon="icon:twitter; ratio: 2"></a>
+                    <a href="#"  class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 2"></a>
+                    <a href="#"  class="uk-icon-link" data-uk-icon="icon:facebook; ratio: 2"></a>
+                    <a href="#"  class="uk-icon-link" data-uk-icon="icon:youtube; ratio: 2"></a>
+                </div>
+            </div>
+            <div class="uk-divider-icon"></div>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-primary uk-modal-close" type="button">Tutup</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL KONTAK
+----------------------------- -->
+<div id="modal-kontak" uk-modal>
+    <div class="uk-modal-dialog">
+        <div class="uk-modal-header">
+        </div>
+        <div class="uk-modal-body" uk-overflow-auto>
+            <div class="uk-divider-icon"></div>
+            <div class="uk-card uk-card-default uk-padding-large">
+                <div class="uk-card-media-top uk-text-center">
+                </div>
+            </div>
+            <div class="uk-divider-icon"></div>
+            
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-primary uk-modal-close" type="button">TUTUP</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/sheetdb.js"></script>
+</body>
+</html>

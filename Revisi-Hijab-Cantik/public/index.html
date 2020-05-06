@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hijab Wanita Cantik</title>
+    <meta charset="utf-8">
+     <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta content='#009688' name='theme-color'/>
+    <meta content='#009688' name='msapplication-navbutton-color'/>
+    <meta content='yes' name='apple-mobile-web-app-capable'/>
+    <meta content='#009688' name='apple-mobile-web-app-status-bar-style'/>
+    <link rel="stylesheet" href="css/uikit.css" />
+    <link rel="stylesheet" href="css/costume.css" />
+
+     <!-- Utility Service
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+</head>
+<body>
+
+<!-- STICKY BAR 
+----------------------------- -->
+<div data-uk-sticky class="uk-navbar-container uk-preserve-width">
+    <nav class="uk-card uk-card-default uk-navbar-item" id="wakilat-nav" uk-navbar>
+        <div class="uk-navbar-left">
+        <a href="#" class=" uk-logo uk-animation-fade uk-animation-fast" tabindex="0"><img src="https://3.bp.blogspot.com/-jNZ14VapMyQ/XjU4AJw6AXI/AAAAAAAAAZI/LfMqKkPSBKkpJTjCJCH7yq1wQZc7htvrACLcBGAsYHQ/s1600/20200201_153116.png" width="180px"/></a>
+        </div>
+        <div class="uk-navbar-right">
+            <div class="uk-navbar-item">
+            <a href="#modal-sections" uk-icon="icon: bell; ratio:1.2;" class="uk-navbar-toggle uk-visible@l" id="icon-bell" uk-toggle><span id="uk-bell" class="uk-badge uk-badge-success" uk-scrollspy="cls: uk-animation-shake; repeat: true; delay: 100">1</span>
+            </a>
+            <a href="#modal-full" class="uk-navbar-toggle uk-visible@l" uk-icon="icon: search; ratio:1.2;" id="icon-search" uk-toggle></a>
+            </div>
+
+            <a class="uk-hidden@m" id="icon-menu-mobile uk-visible@l" data-uk-toggle data-uk-navbar-toggle-icon href="#mobileCanvas"></a>
+            <a href="#uk-modal-login" class="uk-button uk-button-default uk-visible@l" id="icon-signout" uk-toggle><span uk-icon="icon: sign-in; ratio:1.2;"></span> LOG IN</a>
+        </div>
+    </nav>
+
+
+
+    <div id="mobileCanvas" data-uk-offcanvas="flip: true; overlay: true">
+            <div class="uk-offcanvas-bar uk-light uk-offcanvas-bar-animation uk-offcanvas-slide">
+                <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+                
+                <ul class="uk-nav uk-nav-default">
+                    <li class="uk-nav-header uk-preserve-width">
+                        Hijab Wanita Cantik
+                    </li>
+                     <div class="uk-divider-icon"></div>
+                     <!-- nav admin -->
+                    <li><a href="#modal-sections" uk-toggle><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: bell"></span> Pemberitahuan</a></li>
+
+                    <li class="uk-nav-divider"></li>
+
+                    <li><a href="#modal-full" uk-toggle><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: search"></span> Cari produk</a></li>
+                    <li class="uk-nav-divider "></li>
+
+                    <li><a href="#uk-modal-login" uk-toggle><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: sign-in"></span> Masuk akun</a></li>
+
+                    <div class="uk-divider-icon"></div>
+                </ul>
+            </div>
+        </div><!-- MOBILE CANVAS
+    ------------------------- -->
+</div>
+<!-- MODAL FULL SEARCH
+----------------------------------- -->
+    <div id="modal-full" class="uk-modal-full uk-modal" uk-modal>
+        <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+            <button class="uk-modal-close-full" type="button" uk-close></button>
+            <form class="uk-search uk-search-large">
+                <input class="uk-search-input uk-text-center uk-text-small" type="search" placeholder="Cari..." autofocus>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- PROFILE PAGE
+-------------------------------------- -->
+<div class="uk-card row-center">
+    <div class="uk-child-width-1-1@m" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-media-top">
+                    <img src="images/light.jpg" class="uk-border-circle" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <h4 class="uk-card-title">Hijab Wanita Cantik</h4>
+                    <p class="descID">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                </div>
+                <div class="uk-card-footer uk-padding-small">
+                    <a href="#modal-kontak" class="uk-button uk-button-default uk-float-left uk-padding-auto" id="btn_sos" uk-toggle>Kontak</a>
+                    <a href="#modal-sosmed" class="uk-button uk-button-default uk-float-right uk-padding-auto" uk-toggle>Link &amp; Sosmed</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="uk-card uk-card-default uk-box-shadow-medium">
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="autoplay: true; delay: 1000">
+
+          <ul class="uk-slideshow-items">
+              <li>
+                  <img src="https://1.bp.blogspot.com/-3ZaHV1NKGSw/XiXCrtgU4XI/AAAAAAAAAWk/05xIT-gdbrwZnLwPvo6YcpoYWcUp8HAUQCLcBGAsYHQ/s1600/sreenshoot-image.png" alt="">
+              </li>
+              <li>
+                  <img src="https://1.bp.blogspot.com/-3ZaHV1NKGSw/XiXCrtgU4XI/AAAAAAAAAWk/05xIT-gdbrwZnLwPvo6YcpoYWcUp8HAUQCLcBGAsYHQ/s1600/sreenshoot-image.png" alt="" >
+              </li>
+              <li>
+                  <img src="https://1.bp.blogspot.com/-3ZaHV1NKGSw/XiXCrtgU4XI/AAAAAAAAAWk/05xIT-gdbrwZnLwPvo6YcpoYWcUp8HAUQCLcBGAsYHQ/s1600/sreenshoot-image.png" alt="">
+              </li>
+          </ul>
+
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+</div>
+</div>
+
+
+<!-- MODAL NOTIF
+----------------------------- -->
+<div id="modal-sections" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h4 class="uk-text-medium"><span data-uk-icon="icon:bell; ratio:1.2"></span> Selamat!</h4>
+        </div>
+        <div class="uk-modal-body" uk-overflow-auto>
+            <p>Tidak pemberitahuan apapun disini!</p>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Kembali</button>
+            <a href="/admin" class="uk-button uk-button-primary">Ok</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL SOCIAL MEDIA
+----------------------------- -->
+<div id="modal-sosmed" uk-modal>
+    <div class="uk-modal-dialog">
+        <div class="uk-modal-body">
+            <div class="uk-divider-icon"></div>
+            <div class="uk-card uk-card-default uk-padding-large">
+                <div class="uk-card-media-top uk-text-center">
+                    <!-- <img src="images/light.jpg" class="uk-border-circle" alt="">
+                    <h2 class="uk-card-header">Ikuti Kami</h2> -->
+                    <a href="#"  class="uk-icon-link " data-uk-icon="icon:twitter; ratio: 2"></a>
+                    <a href="#"  class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 2"></a>
+                    <a href="#"  class="uk-icon-link" data-uk-icon="icon:facebook; ratio: 2"></a>
+                    <a href="#"  class="uk-icon-link" data-uk-icon="icon:youtube; ratio: 2"></a>
+                </div>
+            </div>
+            <div class="uk-divider-icon"></div>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-primary uk-modal-close" type="button">Tutup</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL KONTAK
+----------------------------- -->
+<div id="modal-kontak" uk-modal>
+    <div class="uk-modal-dialog">
+        <div class="uk-modal-header">
+        </div>
+        <div class="uk-modal-body" uk-overflow-auto>
+            <div class="uk-divider-icon"></div>
+            <div class="uk-card uk-card-default uk-padding-large">
+                <div class="uk-card-media-top uk-text-center">
+                </div>
+            </div>
+            <div class="uk-divider-icon"></div>
+            
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-primary uk-modal-close" type="button">TUTUP</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- CONTENT GRID LAYOUT START
+-------------------------------- -->
+<div class="uk-grid  uk-card-body uk-grid-medium uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-3@l  uk-child-width-1-4@xl" data-uk-grid="masonry: true" data-uk-sortable="handle: .drag-icon" id="uk-database">
+    <script id="grid-template" type="text/x-handlebars-template">
+
+     <div>
+        <div class="uk-card uk-card-default uk-card-hover" uk-scrollspy="cls: uk-animation-fade; repeat: true; delay: 1100">
+                
+                <div class="uk-card-header">
+                    <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid>
+                        <div class="uk-width-expand">
+                          <span class="cat-txt"> Rp. {{cells.Harga}}</span>
+                        </div>
+                        <div class="uk-width-auto uk-text-right uk-text-muted">
+                            <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1.2"></a>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="uk-card-media-top">
+                    <img src="{{cells.Gambar}}" alt="{{cells.Nama}}">
+                </div>
+                <div class="uk-card-body">
+                <ul uk-accordion style="overflow: hidden">
+               
+                <li class="uk-description-list">
+                    <dt class="uk-margin-small-bottom uk-margin-remove-adjacent uk-width-expand uk-accordion-title">{{cells.Nama}}</dt>
+                    <dd class="uk-text-small uk-text-muted uk-text-justify uk-align-justify@s uk-align-justify@m uk-align-justify@l uk-accordion-content">{{cells.Deskripsi}}</dd>
+                </li>
+                </div>
+                
+                </ul>
+
+                <div class="uk-card-footer">
+                    <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid>
+                        <div class="uk-width-auto uk-text-small uk-text-left">
+                            <i id="on-product" data-uk-tooltip="title: Tersedia" class="uk-icon-button" uk-icon="info"></i>
+                        </div>
+                        <div class="uk-width-expand uk-text-center">
+                           
+                            <a href="#" id="link-whatsapp" data-uk-tooltip="title: Whatsapp" class="uk-icon-link" data-uk-icon="icon:whatsapp; ratio: 1.2"></a>
+                        </div>
+
+                        <div class="uk-width-auto uk-text-right">
+                            <a href="#" id="link-ek"><span data-uk-icon="icon:bolt; ratio: 1.2"></span> View More</a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+        </div>
+     </div>
+         
+    </script>
+</div>
+<!-- CONTENT GRID LAYOUT END
+-------------------------------- -->
+<div class="uk-section uk-card uk-card-default">
+    <div class="uk-container">
+
+        <div class="uk-child-width-1-3@m uk-padding-small" uk-grid>
+            <div>
+                <h4 class="uk-text-center">OFFICIAL STORE</h4>
+                <p class="uk-text-center uk-text-muted">Jl. Raya Karangpucung RT 03/11, Desa Sindangbarang, Dusun Banjarwaru, Kecamatan Karangpucung - Cilacap 53255.</p>
+                <p class="uk-text-center">Lihat di <a href="#">Google Maps</a></p>
+                <div class="uk-divider-icon uk-hidden@l"></div>
+            </div>
+
+            
+
+             <div>
+                <h4 class="uk-text-center">PAYMENT &amp; DELIVERY</h4>
+                <p class="uk-text-center uk-text-muted">Jl. Raya Karangpucung RT 03/11, Desa Sindangbarang, Dusun Banjarwaru, Kecamatan Karangpucung - Cilacap 53255.</p>
+               <div class="uk-divider-icon uk-hidden@l"></div>
+            </div>
+
+           
+
+             <div>
+                <h4 class="uk-text-center">HUBUNGI KAMI</h4>
+                <p class="uk-text-center uk-text-muted">Jl. Raya Karangpucung RT 03/11, Desa Sindangbarang, Dusun Banjarwaru, Kecamatan Karangpucung - Cilacap 53255.</p>
+                
+            </div>  
+            
+        </div>
+
+    </div>
+</div>
+
+
+<!--FOOTER-->
+<footer class="uk-section uk-section-xsmall uk-box-shadow-xlarge">
+    <div class="uk-container">
+        <p class="uk-text-small uk-text-center">Copyright 2020 - <a href="">E-compfast Digital </a>| Built with <a href="#" title="E-compfast Digital" target="_blank" data-uk-tooltip><span data-uk-icon="google"></span></a> </p>
+    </div>
+</footer>
+<!--/FOOTER-->
+
+<!-- ====== MODAL LOGIN ======
+----------------------------- -->
+<div id="uk-modal-login" uk-modal>
+
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+
+            <h4 class="uk-text-medium uk-text-center uk-text-primary">
+                <span data-uk-icon="icon: user; ratio:1"></span>
+            Masuk Akun</h4>
+           
+        </div>
+        <div class="uk-modal-body" uk-overflow-auto>
+            <form id="login" class="uk-box-shadow-large uk-padding uk-text-center uk-border-rounded">
+                <div class="uk-margin-small">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                        <input class="uk-input" type="email" id="emailTxt" placeholder="E-mail"></input>
+                    </div>
+                </div>
+                <div class="uk-margin-small">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                        <input class="uk-input" type="password" id="passwordTxt" placeholder="Kata Sandi" ></input>
+                    </div>
+                </div>
+            </form>
+
+            
+        </div>
+        <div class="uk-modal-footer uk-text-right" uk-switcher="connect: .switcher-container">
+            
+            <a href="#daftar" class="uk-button uk-button-default" id="daftarBtn" uk-toggle> Daftar</a>
+            <a href="#login" class="uk-button uk-button-primary" id="loginBtn">
+                <span data-uk-icon="icon: sign-in; ratio:1.2"></span> Masuk</a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ====== MODAL LOGIN ======
+----------------------------- -->
+<div id="daftar" uk-modal>
+
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+
+            <h4 class="uk-text-medium uk-text-center uk-text-primary">
+                <span data-uk-icon="icon: user; ratio:1"></span>
+            Daftar Akun</h4>
+           
+        </div>
+        <div class="uk-modal-body" uk-overflow-auto>
+          <form id="daftar" class="uk-box-shadow-large uk-padding uk-text-center uk-border-rounded">
+              <div class="uk-margin-small">
+                  <div class="uk-inline">
+                      <span class="uk-form-icon" uk-icon="icon: user"></span>
+                      <input class="uk-input" type="email" id="emailTxt" placeholder="E-mail"></input>
+                  </div>
+              </div>
+              <div class="uk-margin-small">
+                  <div class="uk-inline">
+                      <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                      <input class="uk-input" type="password" id="passwordTxt" placeholder="Kata Sandi" ></input>
+                  </div>
+              </div>
+
+               <div class="uk-margin-small">
+                  <div class="uk-inline">
+                      <span class="uk-form-icon" uk-icon="icon: database"></span>
+                      <input class="uk-input" type="text" id="namaToko" placeholder="Nama Toko" ></input>
+                  </div>
+              </div>
+          </form>
+
+            
+        </div>
+        <div class="uk-modal-footer uk-text-right" uk-switcher="connect: .switcher-container">
+            
+            <a href="#daftar" class="uk-button uk-button-default" id="daftarBtn"> Daftar</a>
+            
+        </div>
+    </div>
+</div>
+
+<!--  MODAL LOGIN END DOCUMENT 
+----------------------------- -->
+
+<script src="js/config.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+#wakilat-nav {
+	background: #009688;
+	color: white;
+}
+
+.hiddenIcon {
+	display: none;
+}
+/*#uk-bell {
+
+	-webkit-animation: blink 1.8s linear infinite;
+	-moz-animation: blink 1.5s linear infinite;
+	-webkit-animation: blink 1.8s linear infinite;
+	-o-animation: blink 1.8s linear infinite;
+	animation: blink 1.8s linear infinite;
+
+}
+
+
+*/
+
+#link-whatsapp {
+	color: #009688;
+}
+#link-ek {
+	color: #009688;
+}
+.uk-accordion-title:before{
+	background-image: url("../images/chevron-down.svg");
+}
+ 
+.uk-open.uk-accordion-title:before {
+		background-image: url("../images/chevron-up.svg");
+
+	}
+
+#icon-setting, 
+#icon-tutorial, 
+#icon-database, 
+#icon-login, 
+#icon-signout,
+#icon-menu-mobile{
+	color: white;
+	text-decoration: none;
+}
+.imgPreview {
+	display: none;
+}
+#on-product {
+	background: #00c75e21;
+	color: #009688;
+	-webkit-animation: blink 1.5s linear infinite;
+	-moz-animation: blink 1.5s linear infinite;
+	-webkit-animation: blink 1.5s linear infinite;
+	-o-animation: blink 1.5s linear infinite;
+	animation: blink 1.5s linear infinite;
+}
+
+@-webkit-keyframes blink {
+	10%{opacity: 1;}
+	50%{opacity: 0.8;}
+	50.01%{opacity: .6;}
+	100%{opacity: .5;}
+}
+
+@-moz-keyframes blink {
+	10%{opacity: 1;}
+	50%{opacity: 0.8;}
+	50.01%{opacity:.6;}
+	100%{opacity: .5;}
+}
+
+@-ms-keyframes blink {
+	10%{opacity: 1;}
+	50%{opacity: 0.8;}
+	50.01%{opacity: .6;}
+	100%{opacity: .5;}
+}
+
+@-o-keyframes blink {
+	10%{opacity: 1;}
+	50%{opacity: 0.8;}
+	50.01%{opacity: .6;}
+	100%{opacity: .5;}
+}
+
+@keyframes blink {
+	10%{opacity: 1;}
+	50%{opacity: 0.8;}
+	50.01%{opacity: .6;}
+	100%{opacity: .5;}
+}
+
+#off-product {
+
+	background: #f0506e29;
+	color: #f0506e;
+
+}
+
+#btn_sos {
+	background: #009688;
+	color: white;
+	border: 1px outset rgba(0, 0, 0, 0.2);
+}
+
+#hide {
+	display: none
+}
+
+#icon-bell {
+	color: white; 
+	margin-left: auto; 
+	margin-right: 0rem;
+}
+
+#icon-search {
+	color: white;
+}
+
+
+a, a:hover {
+	text-decoration: none;
+}
+
+
+.row-center{
+	text-align: center;
+	float: center;
+}
+
+.uk-card-media-top {
+	margin-bottom: 0rem;
+}
